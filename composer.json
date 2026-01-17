@@ -3,7 +3,7 @@
     "type": "project",
     "require": {
         "php": ">=8.2",
-        "accela-framework/accela": ">=0.6.4",
+        "accela-framework/accela": ">=0.6.8",
         "accela-framework/sitemap-xml-plugin": ">=0.2"
     }
 }
