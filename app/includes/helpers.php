@@ -117,7 +117,9 @@ function buildDataFileTree(){
       if ($item->isDir()) {
         $_relPath = "{$dir}{$item->getFilename()}/";
         $node["isGroup"] = true;
-        $node["children"][] = $walk($item->getBasename(""), $_relPath);
+        // 数値プレフィックスを除去してタイトルとして使用
+        $dirTitle = preg_replace('/^\d+_/', '', $item->getBasename(""));
+        $node["children"][] = $walk($dirTitle, $_relPath);
 
       } else if($item->getExtension() === "md") {
         $filePath = $item->getPathname();
@@ -167,7 +169,7 @@ function buildDataFileTree(){
     });
 
 
-    if(count($node["children"]) > 0) $node["isGroup"] = true;
+    $node["isGroup"] = count($node["children"]) > 0;
     return $node;
   };
 

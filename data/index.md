@@ -23,6 +23,21 @@ Accela Wikiは、PHP SPAフレームワークの**Accela**で構築されたマ�
 
 このサイト自体がAccela Wikiで構築されています。サイドバーのナビゲーションや階層構造は、`data/`ディレクトリの構成から自動生成されています。
 
+```
+data/
+├── index.md           → /
+├── 01_installation.md → /installation
+├── 02_guide/
+│   ├── index.md       → /guide/
+│   ├── 02_basic-usage.md → /guide/basic-usage
+│   └── ...
+└── 03_accela/
+    ├── index.md       → /accela/
+    └── ...
+```
+
+数字プレフィックス（`01_`など）は並び順の制御に使われ、URLからは除外されます。
+
 ## 主な特徴
 
 | 特徴 | Accela Wiki |
