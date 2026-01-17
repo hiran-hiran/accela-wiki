@@ -1,5 +1,5 @@
 {
-    "name": "dev",
+    "name": "accela-framework/wiki",
     "type": "project",
     "require": {
         "php": ">=8.2",
